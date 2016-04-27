@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8789349F1CD0B22000D42CFF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8789349E1CD0B22000D42CFF /* README.md */; };
+		878934A71CD10C6D00D42CFF /* UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 878934A61CD10C6D00D42CFF /* UnitTests.m */; };
 		87E382FA1C6C9FCC001BC503 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E382F91C6C9FCC001BC503 /* main.m */; };
 		87E382FD1C6C9FCC001BC503 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E382FC1C6C9FCC001BC503 /* AppDelegate.m */; };
 		87E383001C6C9FCC001BC503 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E382FF1C6C9FCC001BC503 /* ViewController.m */; };
@@ -19,10 +20,23 @@
 		A116F6C9AB8CA4F90DB5231F /* libPods-InterviewTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3FD8A9370EFDA38E808A2F /* libPods-InterviewTest.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		878934A91CD10C6D00D42CFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87E382ED1C6C9FCC001BC503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87E382F41C6C9FCC001BC503;
+			remoteInfo = InterviewTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4CB1E12170DE3B0562578B38 /* Pods-InterviewTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewTest/Pods-InterviewTest.debug.xcconfig"; sourceTree = "<group>"; };
 		64532B53A713FBCC7EEF1C20 /* Pods-InterviewTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewTest/Pods-InterviewTest.release.xcconfig"; sourceTree = "<group>"; };
 		8789349E1CD0B22000D42CFF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		878934A41CD10C6D00D42CFF /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		878934A61CD10C6D00D42CFF /* UnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTests.m; sourceTree = "<group>"; };
+		878934A81CD10C6D00D42CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87E382F51C6C9FCC001BC503 /* InterviewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E382F91C6C9FCC001BC503 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		87E382FB1C6C9FCC001BC503 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +54,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		878934A11CD10C6D00D42CFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87E382F21C6C9FCC001BC503 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,11 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		878934A51CD10C6D00D42CFF /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				878934A61CD10C6D00D42CFF /* UnitTests.m */,
+				878934A81CD10C6D00D42CFF /* Info.plist */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
 		87E382EC1C6C9FCC001BC503 = {
 			isa = PBXGroup;
 			children = (
 				8789349E1CD0B22000D42CFF /* README.md */,
 				87E382F71C6C9FCC001BC503 /* InterviewTest */,
+				878934A51CD10C6D00D42CFF /* UnitTests */,
 				87E382F61C6C9FCC001BC503 /* Products */,
 				D18AC6355F3993C76E2B5C43 /* Pods */,
 				C41464251BBC6F6AEBAB1339 /* Frameworks */,
@@ -66,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				87E382F51C6C9FCC001BC503 /* InterviewTest.app */,
+				878934A41CD10C6D00D42CFF /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +149,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		878934A31CD10C6D00D42CFF /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 878934AD1CD10C6D00D42CFF /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				878934A01CD10C6D00D42CFF /* Sources */,
+				878934A11CD10C6D00D42CFF /* Frameworks */,
+				878934A21CD10C6D00D42CFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				878934AA1CD10C6D00D42CFF /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 878934A41CD10C6D00D42CFF /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		87E382F41C6C9FCC001BC503 /* InterviewTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87E3830C1C6C9FCC001BC503 /* Build configuration list for PBXNativeTarget "InterviewTest" */;
@@ -146,6 +196,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Shore GmbH";
 				TargetAttributes = {
+					878934A31CD10C6D00D42CFF = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 87E382F41C6C9FCC001BC503;
+					};
 					87E382F41C6C9FCC001BC503 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -165,11 +219,19 @@
 			projectRoot = "";
 			targets = (
 				87E382F41C6C9FCC001BC503 /* InterviewTest */,
+				878934A31CD10C6D00D42CFF /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		878934A21CD10C6D00D42CFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87E382F31C6C9FCC001BC503 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +294,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		878934A01CD10C6D00D42CFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878934A71CD10C6D00D42CFF /* UnitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87E382F11C6C9FCC001BC503 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +315,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		878934AA1CD10C6D00D42CFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87E382F41C6C9FCC001BC503 /* InterviewTest */;
+			targetProxy = 878934A91CD10C6D00D42CFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		87E383011C6C9FCC001BC503 /* Main.storyboard */ = {
@@ -266,6 +344,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		878934AB1CD10C6D00D42CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.termine24.dienstleister.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InterviewTest.app/InterviewTest";
+			};
+			name = Debug;
+		};
+		878934AC1CD10C6D00D42CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.termine24.dienstleister.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InterviewTest.app/InterviewTest";
+			};
+			name = Release;
+		};
 		87E3830A1C6C9FCC001BC503 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -375,6 +481,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		878934AD1CD10C6D00D42CFF /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				878934AB1CD10C6D00D42CFF /* Debug */,
+				878934AC1CD10C6D00D42CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		87E382F01C6C9FCC001BC503 /* Build configuration list for PBXProject "InterviewTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

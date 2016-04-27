@@ -1,10 +1,13 @@
 You're given a small app that fetches images from Flickr (http://www.flickr.com) and displays them in a grid. 
 
+The app has a small problem where sometimes the images don't show up or the user has to tap on the display first before the images show up. 
+
+
 
 You have the following tasks: 
 
-1. The app has a small problem where the user has to tap on the display first before the images show up. 
-Fix this bug
+
+1. Fix this bug
 
 2. Since the source code doesn't contain any data model objects, you need to introdude them.
 
