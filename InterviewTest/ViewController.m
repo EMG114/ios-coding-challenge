@@ -39,6 +39,9 @@
 }
 
 -(void)loadImages {
+    
+    __weak ViewController *weakSelf = self;
+    
     FlickrKit *fk = [FlickrKit sharedFlickrKit];
     FKFlickrInterestingnessGetList *interesting = [[FKFlickrInterestingnessGetList alloc] init];
     [fk call:interesting completion:^(NSDictionary *response, NSError *error) {
@@ -49,9 +52,12 @@
             for (NSDictionary *photoData in [response valueForKeyPath:@"photos.photo"]) {
                 [photos addObject:photoData];
             }
-            self.allPhotos = photos;
+            weakSelf.allPhotos = photos;
             
-            [self.collectionView reloadData];
+            // the reload must be on the main thread
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.collectionView reloadData];
+            });
         }
     }];
 }
