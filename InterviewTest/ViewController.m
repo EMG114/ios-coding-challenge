@@ -78,7 +78,7 @@
     NSURL *photoURL      = [fk photoURLForSize:FKPhotoSizeSmall240 fromPhotoDictionary:photo];
 
     FlickrCell *cell     = [collectionView dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
-    [cell.imageView setImageWithURL:photoURL];
+    [cell.imageView setImageWithURL:photoURL placeholderImage:[UIImage imageNamed:@"Placeholder"]];
     
     return cell;
 }
