@@ -12,11 +12,16 @@
 #import "UIImageView+AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "Photo.h"
+#import "PhotoDetailsViewController.h"
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, PhotoDetailsViewControllerDelegate>
 
-@property (nonatomic, strong) NSArray<Photo *> *allPhotos;
+@property (strong, nonatomic) NSArray<Photo *> *allPhotos;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) UIDynamicAnimator *animator;
+@property (strong, nonatomic) UIGravityBehavior *gravity;
+@property (strong, nonatomic) UICollisionBehavior *collision;
+@property (strong, nonatomic) PhotoDetailsViewController *photoDetails;
 
 @end
 
@@ -38,6 +43,9 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"FlickrCell" bundle:nil]
           forCellWithReuseIdentifier:@"FlickrCell"];
 
+    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    self.photoDetails = [[PhotoDetailsViewController alloc] initWithNibName:@"PhotoDetailsViewController" bundle:nil];
+    self.photoDetails.delegate = self;
 }
 
 -(void)loadImages {
@@ -78,11 +86,8 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    FlickrKit *fk = [FlickrKit sharedFlickrKit];
-
     Photo *photo  = self.allPhotos[indexPath.row];
-    NSURL *photoURL      = [fk photoURLForSize:FKPhotoSizeSmall240 photoID:photo.photoID
-                                        server:photo.server secret:photo.secret farm:[photo.farm stringValue]];
+    NSURL *photoURL      = [photo imageURL];
 
     FlickrCell *cell     = [collectionView dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
     [cell.imageView setImageWithURL:photoURL placeholderImage:[UIImage imageNamed:@"Placeholder"]];
@@ -91,7 +96,48 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    if (self.photoDetails.view.superview == nil) {
+        Photo *photo = self.allPhotos[indexPath.row];
+        NSURL *photoURL = [photo imageURL];
+        
+        [self.photoDetails setupWithImageURL:photoURL title:photo.title];
+        
+        self.photoDetails.view.frame = CGRectMake(0, (self.photoDetails.view.frame.size.height * -1),
+                                                  self.photoDetails.view.frame.size.width,
+                                                  self.photoDetails.view.frame.size.height);
+        
+        self.photoDetails.view.center = CGPointMake(self.view.center.x, self.photoDetails.view.center.y);
+        
+        [self.view addSubview:self.photoDetails.view];
+        
+        self.gravity = [[UIGravityBehavior alloc] initWithItems:@[self.photoDetails.view]];
+        
+        __weak ViewController *weakSelf = self;
+        self.gravity.action = ^{
+            if (self.photoDetails.view.frame.origin.y > self.view.frame.size.height) {
+                [weakSelf.animator removeBehavior:weakSelf.gravity];
+                weakSelf.gravity = nil;
+                [weakSelf.photoDetails.view removeFromSuperview];
+            }
+        };
+        
+        [self.animator addBehavior:self.gravity];
+        
+        self.collision = [[UICollisionBehavior alloc] initWithItems:@[self.photoDetails.view]];
+        UIBezierPath *box = [UIBezierPath bezierPathWithRect:CGRectMake(self.photoDetails.view.frame.origin.x,
+                                                                        self.view.center.y + (self.photoDetails.view.frame.size.height/2),
+                                                                        self.photoDetails.view.frame.size.width,
+                                                                        self.photoDetails.view.frame.size.height)];
+        [self.collision addBoundaryWithIdentifier:@"boundBox" forPath:box];
+        
+        [self.animator addBehavior:self.collision];
+    }
 }
+
+- (void)didTapClosePhotoDetails {
+    [self.animator removeBehavior:self.collision];
+}
+
 
 @end
