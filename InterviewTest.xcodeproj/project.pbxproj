@@ -18,6 +18,8 @@
 		87E383121C6CA37B001BC503 /* FlickrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E383101C6CA37B001BC503 /* FlickrCell.m */; };
 		87E383131C6CA37B001BC503 /* FlickrCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87E383111C6CA37B001BC503 /* FlickrCell.xib */; };
 		9D59FE361CD52A6E004EDAD4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D59FE351CD52A6E004EDAD4 /* Photo.m */; };
+		9D59FE3D1CD52E4F004EDAD4 /* PhotoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D59FE3B1CD52E4F004EDAD4 /* PhotoDetailsViewController.m */; };
+		9D59FE3E1CD52E4F004EDAD4 /* PhotoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D59FE3C1CD52E4F004EDAD4 /* PhotoDetailsViewController.xib */; };
 		A116F6C9AB8CA4F90DB5231F /* libPods-InterviewTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3FD8A9370EFDA38E808A2F /* libPods-InterviewTest.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,9 @@
 		8B3FD8A9370EFDA38E808A2F /* libPods-InterviewTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InterviewTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D59FE341CD52A6E004EDAD4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Models/Photo.h; sourceTree = "<group>"; };
 		9D59FE351CD52A6E004EDAD4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Models/Photo.m; sourceTree = "<group>"; };
+		9D59FE3A1CD52E4F004EDAD4 /* PhotoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailsViewController.h; sourceTree = "<group>"; };
+		9D59FE3B1CD52E4F004EDAD4 /* PhotoDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailsViewController.m; sourceTree = "<group>"; };
+		9D59FE3C1CD52E4F004EDAD4 /* PhotoDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,9 @@
 				87E382FC1C6C9FCC001BC503 /* AppDelegate.m */,
 				87E382FE1C6C9FCC001BC503 /* ViewController.h */,
 				87E382FF1C6C9FCC001BC503 /* ViewController.m */,
+				9D59FE3A1CD52E4F004EDAD4 /* PhotoDetailsViewController.h */,
+				9D59FE3B1CD52E4F004EDAD4 /* PhotoDetailsViewController.m */,
+				9D59FE3C1CD52E4F004EDAD4 /* PhotoDetailsViewController.xib */,
 				87E3830F1C6CA37B001BC503 /* FlickrCell.h */,
 				87E383101C6CA37B001BC503 /* FlickrCell.m */,
 				87E383111C6CA37B001BC503 /* FlickrCell.xib */,
@@ -249,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87E383081C6C9FCC001BC503 /* LaunchScreen.storyboard in Resources */,
+				9D59FE3E1CD52E4F004EDAD4 /* PhotoDetailsViewController.xib in Resources */,
 				87E383051C6C9FCC001BC503 /* Assets.xcassets in Resources */,
 				87E383131C6CA37B001BC503 /* FlickrCell.xib in Resources */,
 				87E383031C6C9FCC001BC503 /* Main.storyboard in Resources */,
@@ -304,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D59FE361CD52A6E004EDAD4 /* Photo.m in Sources */,
+				9D59FE3D1CD52E4F004EDAD4 /* PhotoDetailsViewController.m in Sources */,
 				87E383001C6C9FCC001BC503 /* ViewController.m in Sources */,
 				87E382FD1C6C9FCC001BC503 /* AppDelegate.m in Sources */,
 				8789349F1CD0B22000D42CFF /* README.md in Sources */,

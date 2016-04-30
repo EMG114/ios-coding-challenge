@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailsViewController">
+            <connections>
+                <outlet property="photoImageView" destination="YjI-Dn-7pL" id="ZQZ-yI-dAU"/>
+                <outlet property="titleLabel" destination="Dsw-Ar-Jk7" id="4sU-RP-8kc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YjI-Dn-7pL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zll-6l-xHS">
+                    <rect key="frame" x="0.0" y="270" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsw-Ar-Jk7">
+                            <rect key="frame" x="8" y="8" width="304" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="n0d-tF-Nxg"/>
+                            </constraints>
+                            <string key="text">Image Title
+With two lines</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9C5-c9-huI"/>
+                        <constraint firstAttribute="trailing" secondItem="Dsw-Ar-Jk7" secondAttribute="trailing" constant="8" id="MNC-uN-ddM"/>
+                        <constraint firstItem="Dsw-Ar-Jk7" firstAttribute="leading" secondItem="zll-6l-xHS" secondAttribute="leading" constant="8" id="kus-O1-Ost"/>
+                        <constraint firstItem="Dsw-Ar-Jk7" firstAttribute="top" secondItem="zll-6l-xHS" secondAttribute="top" constant="8" id="pKp-9L-huA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zll-6l-xHS" secondAttribute="trailing" id="87d-xO-Hon"/>
+                <constraint firstAttribute="bottom" secondItem="zll-6l-xHS" secondAttribute="bottom" id="BE5-aw-G9V"/>
+                <constraint firstItem="YjI-Dn-7pL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EAB-6h-UHZ"/>
+                <constraint firstItem="YjI-Dn-7pL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GMS-t7-INn"/>
+                <constraint firstAttribute="trailing" secondItem="YjI-Dn-7pL" secondAttribute="trailing" id="gQa-yZ-7uG"/>
+                <constraint firstAttribute="bottom" secondItem="YjI-Dn-7pL" secondAttribute="bottom" id="lJh-jw-1r4"/>
+                <constraint firstItem="zll-6l-xHS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="u9c-Y0-4Q2"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
