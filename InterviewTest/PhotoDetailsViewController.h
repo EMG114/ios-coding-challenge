@@ -21,7 +21,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (strong, nonatomic) id<PhotoDetailsViewControllerDelegate> delegate;
 
+/**
+ *  Set the data that will be displayed
+ *
+ *  @param imageURL Image URL to display
+ *  @param title Title text to display
+ *
+ */
 - (void)setupWithImageURL:(NSURL *)imageURL title:(NSString *)title;
+
 - (IBAction)closeTap;
 
 @end
