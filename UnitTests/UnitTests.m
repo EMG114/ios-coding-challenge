@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Photo.h"
 
 @interface UnitTests : XCTestCase
 
@@ -24,16 +25,25 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testNewPhotoInstance {
+    Photo *photo = [[Photo alloc] initWithDictionary:@{@"id": @"123", @"server": @"123",
+                                                       @"secret": @"abc123", @"farm": @(2),
+                                                       @"title": @"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}];
+    XCTAssertNotNil(photo.photoID);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testPhotoURL {
+    Photo *photo = [[Photo alloc] initWithDictionary:@{@"id": @"123", @"server": @"123",
+                                                       @"secret": @"abc123", @"farm": @(2),
+                                                       @"title": @"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}];
+    XCTAssertNotNil([photo imageURL]);
+}
+
+- (void)testNullPhotoURL {
+    Photo *photo = [[Photo alloc] initWithDictionary:@{@"server": @"123",
+                                                       @"secret": @"abc123", @"farm": @(2),
+                                                       @"title": @"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}];
+    XCTAssertNil([photo imageURL]);
 }
 
 @end
