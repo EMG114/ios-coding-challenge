@@ -46,6 +46,7 @@ With two lines</string>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv0-JG-5ti">
                     <rect key="frame" x="272" y="8" width="40" height="40"/>
+                    <accessibility key="accessibilityConfiguration" identifier="close_details"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="oXy-dy-JFd"/>
                         <constraint firstAttribute="height" constant="40" id="oao-Jk-5YW"/>

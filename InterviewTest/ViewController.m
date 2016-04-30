@@ -92,6 +92,8 @@
     FlickrCell *cell     = [collectionView dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
     [cell.imageView setImageWithURL:photoURL placeholderImage:[UIImage imageNamed:@"Placeholder"]];
     
+    cell.accessibilityIdentifier = [NSString stringWithFormat:@"item_%i", (int)indexPath.row];
+    
     return cell;
 }
 

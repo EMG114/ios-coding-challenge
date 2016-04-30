@@ -25,6 +25,8 @@
     self.closeButton.layer.borderColor = [UIColor whiteColor].CGColor;
     self.closeButton.layer.borderWidth = 1.0;
     self.closeButton.layer.cornerRadius = self.closeButton.frame.size.width/2;
+    
+    self.titleLabel.accessibilityIdentifier = @"details_title";
 }
 
 - (void)viewWillAppear:(BOOL)animated {

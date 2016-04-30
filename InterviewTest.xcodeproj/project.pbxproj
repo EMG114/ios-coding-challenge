@@ -20,11 +20,19 @@
 		9D59FE361CD52A6E004EDAD4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D59FE351CD52A6E004EDAD4 /* Photo.m */; };
 		9D59FE3D1CD52E4F004EDAD4 /* PhotoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D59FE3B1CD52E4F004EDAD4 /* PhotoDetailsViewController.m */; };
 		9D59FE3E1CD52E4F004EDAD4 /* PhotoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D59FE3C1CD52E4F004EDAD4 /* PhotoDetailsViewController.xib */; };
+		9D59FE461CD53763004EDAD4 /* UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D59FE451CD53763004EDAD4 /* UITests.m */; };
 		A116F6C9AB8CA4F90DB5231F /* libPods-InterviewTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3FD8A9370EFDA38E808A2F /* libPods-InterviewTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		878934A91CD10C6D00D42CFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87E382ED1C6C9FCC001BC503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87E382F41C6C9FCC001BC503;
+			remoteInfo = InterviewTest;
+		};
+		9D59FE481CD53763004EDAD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 87E382ED1C6C9FCC001BC503 /* Project object */;
 			proxyType = 1;
@@ -59,6 +67,9 @@
 		9D59FE3A1CD52E4F004EDAD4 /* PhotoDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailsViewController.h; sourceTree = "<group>"; };
 		9D59FE3B1CD52E4F004EDAD4 /* PhotoDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailsViewController.m; sourceTree = "<group>"; };
 		9D59FE3C1CD52E4F004EDAD4 /* PhotoDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailsViewController.xib; sourceTree = "<group>"; };
+		9D59FE431CD53763004EDAD4 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D59FE451CD53763004EDAD4 /* UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITests.m; sourceTree = "<group>"; };
+		9D59FE471CD53763004EDAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +85,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A116F6C9AB8CA4F90DB5231F /* libPods-InterviewTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D59FE401CD53763004EDAD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +113,7 @@
 				8789349E1CD0B22000D42CFF /* README.md */,
 				87E382F71C6C9FCC001BC503 /* InterviewTest */,
 				878934A51CD10C6D00D42CFF /* UnitTests */,
+				9D59FE441CD53763004EDAD4 /* UITests */,
 				87E382F61C6C9FCC001BC503 /* Products */,
 				D18AC6355F3993C76E2B5C43 /* Pods */,
 				C41464251BBC6F6AEBAB1339 /* Frameworks */,
@@ -106,6 +125,7 @@
 			children = (
 				87E382F51C6C9FCC001BC503 /* InterviewTest.app */,
 				878934A41CD10C6D00D42CFF /* UnitTests.xctest */,
+				9D59FE431CD53763004EDAD4 /* UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +168,15 @@
 				9D59FE351CD52A6E004EDAD4 /* Photo.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		9D59FE441CD53763004EDAD4 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				9D59FE451CD53763004EDAD4 /* UITests.m */,
+				9D59FE471CD53763004EDAD4 /* Info.plist */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 		C41464251BBC6F6AEBAB1339 /* Frameworks */ = {
@@ -207,6 +236,24 @@
 			productReference = 87E382F51C6C9FCC001BC503 /* InterviewTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9D59FE421CD53763004EDAD4 /* UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D59FE4A1CD53763004EDAD4 /* Build configuration list for PBXNativeTarget "UITests" */;
+			buildPhases = (
+				9D59FE3F1CD53763004EDAD4 /* Sources */,
+				9D59FE401CD53763004EDAD4 /* Frameworks */,
+				9D59FE411CD53763004EDAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D59FE491CD53763004EDAD4 /* PBXTargetDependency */,
+			);
+			name = UITests;
+			productName = UITests;
+			productReference = 9D59FE431CD53763004EDAD4 /* UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +269,10 @@
 					};
 					87E382F41C6C9FCC001BC503 = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					9D59FE421CD53763004EDAD4 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 87E382F41C6C9FCC001BC503;
 					};
 				};
 			};
@@ -240,6 +291,7 @@
 			targets = (
 				87E382F41C6C9FCC001BC503 /* InterviewTest */,
 				878934A31CD10C6D00D42CFF /* UnitTests */,
+				9D59FE421CD53763004EDAD4 /* UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +313,13 @@
 				87E383051C6C9FCC001BC503 /* Assets.xcassets in Resources */,
 				87E383131C6CA37B001BC503 /* FlickrCell.xib in Resources */,
 				87E383031C6C9FCC001BC503 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D59FE411CD53763004EDAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +381,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D59FE3F1CD53763004EDAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D59FE461CD53763004EDAD4 /* UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -329,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = 87E382F41C6C9FCC001BC503 /* InterviewTest */;
 			targetProxy = 878934A91CD10C6D00D42CFF /* PBXContainerItemProxy */;
+		};
+		9D59FE491CD53763004EDAD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87E382F41C6C9FCC001BC503 /* InterviewTest */;
+			targetProxy = 9D59FE481CD53763004EDAD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -486,6 +558,32 @@
 			};
 			name = Release;
 		};
+		9D59FE4B1CD53763004EDAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.indie.borelli.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InterviewTest;
+			};
+			name = Debug;
+		};
+		9D59FE4C1CD53763004EDAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.indie.borelli.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InterviewTest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -515,6 +613,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9D59FE4A1CD53763004EDAD4 /* Build configuration list for PBXNativeTarget "UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D59FE4B1CD53763004EDAD4 /* Debug */,
+				9D59FE4C1CD53763004EDAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
