@@ -11,10 +11,11 @@
 #import "FlickrCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "MBProgressHUD.h"
+#import "Photo.h"
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) NSArray *allPhotos;
+@property (nonatomic, strong) NSArray<Photo *> *allPhotos;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
@@ -53,7 +54,8 @@
         if (response) {
             NSMutableArray *photos = [NSMutableArray array];
             for (NSDictionary *photoData in [response valueForKeyPath:@"photos.photo"]) {
-                [photos addObject:photoData];
+                Photo *photo = [[Photo alloc] initWithDictionary:photoData];
+                [photos addObject:photo];
             }
             weakSelf.allPhotos = photos;
             
@@ -78,8 +80,9 @@
     
     FlickrKit *fk = [FlickrKit sharedFlickrKit];
 
-    NSDictionary *photo  = self.allPhotos[indexPath.row];
-    NSURL *photoURL      = [fk photoURLForSize:FKPhotoSizeSmall240 fromPhotoDictionary:photo];
+    Photo *photo  = self.allPhotos[indexPath.row];
+    NSURL *photoURL      = [fk photoURLForSize:FKPhotoSizeSmall240 photoID:photo.photoID
+                                        server:photo.server secret:photo.secret farm:[photo.farm stringValue]];
 
     FlickrCell *cell     = [collectionView dequeueReusableCellWithReuseIdentifier:@"FlickrCell" forIndexPath:indexPath];
     [cell.imageView setImageWithURL:photoURL placeholderImage:[UIImage imageNamed:@"Placeholder"]];
