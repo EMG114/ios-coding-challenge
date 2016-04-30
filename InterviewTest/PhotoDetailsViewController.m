@@ -21,15 +21,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    self.titleLabel.text = self.titleText;
-    [self.photoImageView setImageWithURL:self.imageURL placeholderImage:[UIImage imageNamed:@"Placeholder"]];
+
+    self.closeButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.closeButton.layer.borderWidth = 1.0;
+    self.closeButton.layer.cornerRadius = self.closeButton.frame.size.width/2;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.titleLabel.text = self.titleText;
+    [self.photoImageView setImageWithURL:self.imageURL];
+}
 
 - (void)setupWithImageURL:(NSURL *)imageURL title:(NSString *)title {
     self.titleText = title;
     self.imageURL = imageURL;
+}
+
+- (IBAction)closeTap {
+    [self.delegate didTapClosePhotoDetails];
 }
 
 - (void)didReceiveMemoryWarning {

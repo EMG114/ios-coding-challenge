@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailsViewController">
             <connections>
+                <outlet property="closeButton" destination="nv0-JG-5ti" id="C10-q6-UmS"/>
                 <outlet property="photoImageView" destination="YjI-Dn-7pL" id="ZQZ-yI-dAU"/>
                 <outlet property="titleLabel" destination="Dsw-Ar-Jk7" id="4sU-RP-8kc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -43,6 +44,19 @@ With two lines</string>
                         <constraint firstItem="Dsw-Ar-Jk7" firstAttribute="top" secondItem="zll-6l-xHS" secondAttribute="top" constant="8" id="pKp-9L-huA"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv0-JG-5ti">
+                    <rect key="frame" x="272" y="8" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="oXy-dy-JFd"/>
+                        <constraint firstAttribute="height" constant="40" id="oao-Jk-5YW"/>
+                    </constraints>
+                    <state key="normal" title="X">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeTap" destination="-1" eventType="touchUpInside" id="oHB-F2-xcB"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -50,6 +64,8 @@ With two lines</string>
                 <constraint firstAttribute="bottom" secondItem="zll-6l-xHS" secondAttribute="bottom" id="BE5-aw-G9V"/>
                 <constraint firstItem="YjI-Dn-7pL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EAB-6h-UHZ"/>
                 <constraint firstItem="YjI-Dn-7pL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GMS-t7-INn"/>
+                <constraint firstItem="nv0-JG-5ti" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="NjE-MV-T0J"/>
+                <constraint firstAttribute="trailing" secondItem="nv0-JG-5ti" secondAttribute="trailing" constant="8" id="Zbj-w7-anh"/>
                 <constraint firstAttribute="trailing" secondItem="YjI-Dn-7pL" secondAttribute="trailing" id="gQa-yZ-7uG"/>
                 <constraint firstAttribute="bottom" secondItem="YjI-Dn-7pL" secondAttribute="bottom" id="lJh-jw-1r4"/>
                 <constraint firstItem="zll-6l-xHS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="u9c-Y0-4Q2"/>
