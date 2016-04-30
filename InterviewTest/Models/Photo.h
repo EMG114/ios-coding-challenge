@@ -27,5 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
+/**
+ *  Return the URL with the image
+ *
+ *  @return NSURL or nil
+ */
+- (NSURL * _Nullable)imageURL;
+
 @end
 NS_ASSUME_NONNULL_END

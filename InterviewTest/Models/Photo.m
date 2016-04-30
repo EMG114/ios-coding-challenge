@@ -24,4 +24,16 @@
     return self;
 }
 
+- (NSURL * _Nullable)imageURL {
+    @try {
+        NSURL *url = [[FlickrKit sharedFlickrKit] photoURLForSize:FKPhotoSizeSmall240
+                                                          photoID:self.photoID server:self.server
+                                                           secret:self.secret farm:[self.farm stringValue]];
+        
+        return url;
+    } @catch (NSException *exception) {
+        return nil;
+    }
+}
+
 @end
