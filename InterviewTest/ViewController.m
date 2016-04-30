@@ -10,6 +10,7 @@
 #import "FlickrKit.h"
 #import "FlickrCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -40,6 +41,8 @@
 
 -(void)loadImages {
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     __weak ViewController *weakSelf = self;
     
     FlickrKit *fk = [FlickrKit sharedFlickrKit];
@@ -56,6 +59,7 @@
             
             // the reload must be on the main thread
             dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
                 [weakSelf.collectionView reloadData];
             });
         }
